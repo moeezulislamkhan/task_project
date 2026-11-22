@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Taskboard</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Taskboard</h1>
+<p class="sub" id="sub">Plan it, do it, check it off.</p>
+
+<div class="add">
+<input type="text" id="text" placeholder="What needs doing?" maxlength="120" aria-label="Task">
+<select id="cat" aria-label="Category"><option>Work</option><option>Personal</option><option>Study</option></select>
+<input type="date" id="due" aria-label="Due date">
+<button class="btn" id="addBtn">Add task</button>
+</div>
+
+<div class="bar">
+<div class="tabs" role="group" aria-label="Filter by status">
+<button class="tab" data-f="all" aria-pressed="true">All</button>
+<button class="tab" data-f="active" aria-pressed="false">Active</button>
+<button class="tab" data-f="done" aria-pressed="false">Completed</button>
+</div>
+<input type="text" class="search" id="q" placeholder="Search tasks" aria-label="Search tasks">
+</div>
+
+<ul class="list" id="list"></ul>
+<div class="foot"><span id="count"></span><button id="clear">Clear completed</button></div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
